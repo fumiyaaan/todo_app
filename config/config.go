@@ -24,7 +24,7 @@ func init() {
 func LoadConfig() {
 	cfg, err := ini.Load("config.ini")
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 	Config = ConfigList{
 		Port:      cfg.Section("web").Key("port").MustString("8080"),

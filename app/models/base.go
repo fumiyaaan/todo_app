@@ -23,7 +23,7 @@ const (
 func init() {
 	Db, err := sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
